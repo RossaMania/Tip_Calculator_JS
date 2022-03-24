@@ -1,58 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip Calculator</title>
-</head>
-<body>
-    <header>
+  </head>
+  <body>
+    <header></header>
 
-    </header>
-    
-<h1>Tip Calculator</h1>
+    <h1>Tip Calculator</h1>
 
-<label for="bill">Bill:</label> <input type="text" id="bill" name="bill">
+    <label for="bill">Bill: $</label>
+    <input type="text" id="bill" name="bill" />
 
-<!-- <label for="service-rating">Please rate the service between 1-10. 1 being 'Horrible' and 10 being 'Perfect'!</label> <input type="text" id="service-rating" name="service-rating"> -->
-
-<form>
-    <p>Please rate the service between 1-10. 1 being 'Horrible' and 10 being 'Perfect'!</p>
-    <div>
-        <input type="radio" name="service" id="service-1" value="1">
+    <form>
+      <p class="service-rating_instructions">
+        Please rate the service between 1-10. 1 being 'Horrible' and 10 being
+        'Perfect'!
+      </p>
+      <div class="service-rating_form">
+        <input type="radio" name="service" id="service1" value="1" />
         <label for="service-1">1</label>
-        <input type="radio" name="service" id="service-2" value="2">
+        <input type="radio" name="service" id="service2" value="2" />
         <label for="service-2">2</label>
-        <input type="radio" name="service" id="service-3" value="3">
+        <input type="radio" name="service" id="service3" value="3" />
         <label for="service-3">3</label>
-        <input type="radio" name="service" id="service-4" value="4">
+        <input type="radio" name="service" id="service4" value="4" />
         <label for="service-4">4</label>
-        <input type="radio" name="service" id="service-5" value="5">
+        <input type="radio" name="service" id="service5" value="5" />
         <label for="service-5">5</label>
-        <input type="radio" name="service" id="service-6" value="6">
+        <input type="radio" name="service" id="service6" value="6" />
         <label for="service-6">6</label>
-        <input type="radio" name="service" id="service-7" value="7">
+        <input type="radio" name="service" id="service7" value="7" />
         <label for="service-7">7</label>
-        <input type="radio" name="service" id="service-8" value="8">
+        <input type="radio" name="service" id="service8" value="8" />
         <label for="service-8">8</label>
-        <input type="radio" name="service" id="service-9" value="9">
+        <input type="radio" name="service" id="service9" value="9" />
         <label for="service-9">9</label>
-        <input type="radio" name="service" id="service-10" value="10">
+        <input type="radio" name="service" id="service10" value="10" />
         <label for="service-10">10</label>
+      </div>
+      <button type="Submit" id="submit">Calculate Total</button>
+    </form>
 
-        
-    </div>
-</form>
+    <h3 id="bill">Bill: $<span> </span></h3>
+    <h3 id="tip">Tip: $<span></span></h3>
+    <h3 id="total">Total: $<span></span></h3>
 
-<p>Please tip your server $</p><p class="tip-total">tip total</p>
-
-
-
-<footer>
-
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="index.js"></script>
-</body>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

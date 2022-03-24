@@ -8,37 +8,107 @@
 // 8 = Great
 // 9 = Excellent
 // 10 = Perfect
+// var service = prompt("Please rate the service between 1-10. 1 being 'Horrible' and 10 being 'Perfect'!")
 
+const billDisplay = document.getElementById("bill");
 
-var bill = prompt("Bill Total: ");
+const tipDisplay = document.getElementById("tip");
 
-var service = prompt("Please rate the service between 1-10. 1 being 'Horrible' and 10 being 'Perfect'!")
+const totalDisplay = document.getElementById("total");
 
-var tip = (bill * X).toFixed(2);
+var bill = 0;
 
-var X;
+var tip = 0;
 
-if (service <= 3) {
+billDisplay.addEventListener("input", function (event) {
+  
+  bill = Number(event.target.value);
+
+  billDisplay.innerHTML = bill;
+
+  console.log(bill);
+
+});
+
+function calculateTip() {
+
+  var service = Number($('input[name="service"]:checked').val());
+
+  if (service <= 3) {
+    
     X = 0.15;
-    alert("Please tip your server $" + tip + ". Thanks!")
-}
 
-if (service >= 4 && service <= 5) {
+    console.log(X);
+
+    tip = Number((bill * X).toFixed(2));
+
+    console.log(tip);
+
+    tipDisplay.innerHTML = tip;
+  }
+
+  if (service >= 4 && service <= 5) {
+    
     X = 0.18;
-    alert("Please tip your server $" + tip + ". Thanks!")
-}
 
-if (service >= 6 && service <= 7) {
+    console.log(X);
+
+    tip = Number((bill * X).toFixed(2));
+
+    console.log(tip);
+
+    tipDisplay.innerHTML = tip;
+  }
+
+  if (service >= 6 && service <= 7) {
+    
     X = 0.21;
-    alert("Please tip your server $" + tip + ". Thanks!")
+
+    console.log(X);
+
+    tip = Number((bill * X).toFixed(2));
+
+    console.log(tip);
+
+    tipDisplay.innerHTML = tip;
+  }
+
+  if (service >= 8 && service <= 10) {
+    
+    X = 0.3;
+
+    console.log(X);
+
+    tip = Number((bill * X).toFixed(2));
+
+    console.log(tip);
+
+    tipDisplay.innerHTML = tip;
+  
+  }
+
 }
 
-if (service >= 8 && service <= 10) {
-    X = 0.30;
-    alert("Please tip your server $" + tip + ". Thanks!")
-} else {
-    alert("Please try again, and enter a number between 1-10 next time.")
+function calculateTotal() {
+  
+  var total = bill + tip;
+
+  totalDisplay.innerHTML = total;
+
+  console.log("total bill: ", bill)
+
+  console.log("total tip: ", tip) 
+
+  console.log(total);
+
 }
 
-$(".tip-total").text(tip);
+document.getElementById("submit").addEventListener("click", function (event) {
+  
+  event.preventDefault();
+  
+  calculateTip();
+  
+  calculateTotal();
 
+});
