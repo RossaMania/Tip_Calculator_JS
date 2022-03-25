@@ -10,25 +10,29 @@
 // 10 = Perfect
 // var service = prompt("Please rate the service between 1-10. 1 being 'Horrible' and 10 being 'Perfect'!")
 
-const billDisplay = document.getElementById("bill");
+const billInput = document.getElementById("bill");
 
 const tipDisplay = document.getElementById("tip");
 
 const totalDisplay = document.getElementById("total");
 
-var bill = 0;
+const bill_Total = document.getElementById("bill_Total")
+
+var bill= 0;
 
 var tip = 0;
 
-billDisplay.addEventListener("input", function (event) {
+  billInput.addEventListener("input", function (event) {
   
   bill = Number(event.target.value);
 
-  billDisplay.innerHTML = bill;
+  bill_Total.innerHTML = bill;
 
   console.log(bill);
 
 });
+
+
 
 function calculateTip() {
 
@@ -73,7 +77,21 @@ function calculateTip() {
     tipDisplay.innerHTML = tip;
   }
 
-  if (service >= 8 && service <= 10) {
+   if (service = 8) {
+    
+    X = 0.25;
+
+    console.log(X);
+
+    tip = Number((bill * X).toFixed(2));
+
+    console.log(tip);
+
+    tipDisplay.innerHTML = tip;
+  
+  }
+
+  if (service >= 9 && service <= 10) {
     
     X = 0.3;
 
@@ -106,7 +124,7 @@ function calculateTotal() {
 document.getElementById("submit").addEventListener("click", function (event) {
   
   event.preventDefault();
-  
+
   calculateTip();
   
   calculateTotal();
