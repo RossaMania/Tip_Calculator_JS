@@ -77,7 +77,7 @@ function calculateTip() {
     tipDisplay.innerHTML = tip;
   }
 
-   if (service = 8) {
+   if (service === 8) {
     
     X = 0.25;
 
