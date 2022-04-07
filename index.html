@@ -30,114 +30,67 @@
         Please rate the service between 1-10. 1 being 'Horrible' and 10 being
         'Perfect'!
       </p>
-      <div class="container-fluid service-rating_form">
+      <div class="container-lg service-rating_form">
         <div class="row">
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service1"
-            value="1"
-          />
-          <label class="col-md-3" for="service-1" id="service1"
-            >1 - Horrible!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service2"
-            value="2"
-          />
-          <label class="col-md-3" for="service-2" id="service2"
-            >2 - Terrible!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service3"
-            value="3"
-          />
-          <label class="col-md-3" for="service-3" id="service3">3 - Bad!</label>
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service4"
-            value="4"
-          />
-          <label class="col-md-3" for="service-4" id="service4"
-            >4 - Not Great!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service5"
-            value="5"
-          />
-          <label class="col-md-3" for="service-5" id="service5"
-            >5 - Okay!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service6"
-            value="6"
-          />
-          <label class="col-md-3" for="service-6" id="service6"
-            >6 - Good!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service7"
-            value="7"
-          />
-          <label class="col-md-3" for="service-7" id="service7"
-            >7 - Very Good!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service8"
-            value="8"
-          />
-          <label class="col-md-3" for="service-8" id="service8"
-            >8 - Great!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service9"
-            value="9"
-          />
-          <label class="col-md-3" for="service-9" id="service9"
-            >9 - Excellent!</label
-          >
-          <input
-            class="col-md-3"
-            type="radio"
-            name="service"
-            id="service10"
-            value="10"
-          />
-          <label class="col-md-3" for="service-10" id="service10"
-            >10 - Perfect!</label
-          >
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service1" value="1" />
+            <label for="service-1" id="service1">1 - Horrible!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service2" value="2" />
+            <label for="service-2" id="service2">2 - Terrible!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service3" value="3" />
+            <label for="service-3" id="service3">3 - Bad!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service4" value="4" />
+            <label for="service-4" id="service4">4 - Not Great!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service5" value="5" />
+            <label for="service-5" id="service5">5 - Okay!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service6" value="6" />
+            <label for="service-6" id="service6">6 - Good!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service7" value="7" />
+            <label for="service-7" id="service7">7 - Very Good!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service8" value="8" />
+            <label for="service-8" id="service8">8 - Great!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service9" value="9" />
+            <label for="service-9" id="service9">9 - Excellent!</label>
+          </div>
+
+          <div class="col-md-6">
+            <input type="radio" name="service" id="service10" value="10" />
+            <label for="service-10" id="service10">10 - Perfect!</label>
+          </div>
         </div>
       </div>
-      <button type="Submit" id="submit">Calculate Total</button>
+      <div class="text-center">
+        <button type="Submit" id="submit">Calculate Total</button>
+      </div>
     </form>
 
-    <h3>Bill: $<span id="bill_Total"> </span></h3>
-    <h3>Tip: $<span id="tip"></span></h3>
-    <h3>Total: $<span id="total"></span></h3>
+    <h3 class="text-center">Bill: $<span id="bill_Total"> </span></h3>
+    <h3 class="text-center">Tip: $<span id="tip"></span></h3>
+    <h3 class="text-center">Total: $<span id="total"></span></h3>
 
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
