@@ -23,7 +23,7 @@ var bill= 0;
 var tip = 0;
 
   billInput.addEventListener("input", function (event) {
-  
+
   bill = Number(event.target.value);
 
   bill_Total.innerHTML = bill;
@@ -39,7 +39,7 @@ function calculateTip() {
   var service = Number($('input[name="service"]:checked').val());
 
   if (service <= 3) {
-    
+
     X = 0.15;
 
     console.log(X);
@@ -52,7 +52,7 @@ function calculateTip() {
   }
 
   if (service >= 4 && service <= 5) {
-    
+
     X = 0.18;
 
     console.log(X);
@@ -65,7 +65,7 @@ function calculateTip() {
   }
 
   if (service >= 6 && service <= 7) {
-    
+
     X = 0.21;
 
     console.log(X);
@@ -78,7 +78,7 @@ function calculateTip() {
   }
 
    if (service === 8) {
-    
+
     X = 0.25;
 
     console.log(X);
@@ -88,11 +88,11 @@ function calculateTip() {
     console.log(tip);
 
     tipDisplay.innerHTML = tip;
-  
+
   }
 
   if (service >= 9 && service <= 10) {
-    
+
     X = 0.3;
 
     console.log(X);
@@ -102,13 +102,13 @@ function calculateTip() {
     console.log(tip);
 
     tipDisplay.innerHTML = tip;
-  
+
   }
 
 }
 
 function calculateTotal() {
-  
+
   var total = bill + tip;
 
   totalDisplay.innerHTML = total;
@@ -122,11 +122,11 @@ function calculateTotal() {
 }
 
 document.getElementById("submit").addEventListener("click", function (event) {
-  
+
   event.preventDefault();
 
   calculateTip();
-  
+
   calculateTotal();
 
 });
